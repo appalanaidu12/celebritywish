@@ -1,20 +1,49 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
+<ion-content [fullscreen]="true" class="ion-padding">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="sliders">
+    <ion-slides pager="false" [options]="slideOptions" #slideWithNav
+    (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+    <ion-slide *ngFor="let s of sliderOne.slidesItems">
+     <div class="slider-images">
+      <img src="../../assets/slideimages/{{s.id}}.jpg">
+     </div>
+    </ion-slide>
+  </ion-slides>
+  </div>
+  <div class="feature">Features</div>
+  <div class="sliders1">
+    <ion-slides pager="false" [options]="slideOptions1" #slideWithNav
+    (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+    <ion-slide (click)="celebrityInner(s.id)" *ngFor="let s of sliderOne.slidesItems">
+     <div class="slider-images">
+      <img src="../../assets/slideimages/{{s.id}}.jpg">
+     </div>
+    </ion-slide>
+  </ion-slides>
+  </div>
+  <div class="feature">TollyWood</div>
+  <div class="sliders1">
+    <ion-slides pager="false" [options]="slideOptions1" #slideWithNav
+    (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+    <ion-slide *ngFor="let s of sliderOne.slidesItems">
+     <div class="slider-images">
+      <img src="../../assets/slideimages/{{s.id}}.jpg">
+     </div>
+    </ion-slide>
+  </ion-slides>
+  </div>
+  <div class="feature">Top Heros</div>
+  <div class="sliders1">
+    <ion-slides pager="false" [options]="slideOptions1" #slideWithNav
+    (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+    <ion-slide *ngFor="let s of sliderOne.slidesItems">
+     <div class="slider-images">
+      <img src="../../assets/slideimages/{{s.id}}.jpg">
+     </div>
+    </ion-slide>
+  </ion-slides>
   </div>
 </ion-content>
+
+<app-footer [currentPage]="'home'"></app-footer>

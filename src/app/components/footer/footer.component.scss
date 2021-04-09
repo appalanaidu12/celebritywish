@@ -1,0 +1,18 @@
+.main-footer{
+  display: flex;
+  justify-content: center;
+  .main-footer-in:last-child{
+    text-align: right;
+  }
+}
+.main-footer-in{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  float: left;
+  margin: 0 10px;
+  width: 100%;
+}
+.active{
+  color: red;
+}

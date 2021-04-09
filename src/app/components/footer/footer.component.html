@@ -1,0 +1,14 @@
+<ion-footer>
+  <ion-toolbar>
+    <div class="main-footer">
+      <div class=" main-footer-in" [class]="currentPage=='home'?'active' : ''" (click)="navigateURL('home')">
+      <ion-icon name="home-outline"></ion-icon>
+      <span>Home</span>
+      </div>
+      <div class="main-footer-in" [class]="currentPage=='profile'?'active':''" (click)="navigateURL('profile')">
+      <ion-icon name="person-outline"></ion-icon>
+      <span>Profile</span>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>
